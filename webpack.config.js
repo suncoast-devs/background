@@ -15,5 +15,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin()]
+  devtool: 'source-map',
+  plugins: [new HtmlWebpackPlugin({ title: 'SDG BG' })]
 }
