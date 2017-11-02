@@ -46,10 +46,7 @@ const draw = () => {
             cellSize * j + rand(cellSize / 2) + cellSize / 4,
             cellSize * i + rand(cellSize / 2) + cellSize / 4
           )
-
           ctx.drawImage(img, -elemSize / 2, -elemSize / 2, elemSize, elemSize)
-          // ctx.fillRect(-elemSize / 2, -elemSize / 2, elemSize, elemSize)
-
           DOMURL.revokeObjectURL(url)
           ctx.resetTransform()
         }
