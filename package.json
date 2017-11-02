@@ -12,7 +12,10 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "deploy": "gh-pages-deploy",
-    "predeploy": "npm run build"
+    "deploy": "gh-pages-deploy"
+  },
+  "gh-pages-deploy": {
+    "prep": ["build"],
+    "noprompt": true
   }
 }
