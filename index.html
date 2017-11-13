@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Background</title>
+    <style>
+      html, body {
+        min-height: 100vh;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        background-color: #f7f1d9;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em;
+      }
+
+      input {
+        width: 5em;
+        text-align: center;
+        margin-right: 2em;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas></canvas>
+    </main>
+    <form>
+      <label>w <input name="width" type="number" value="640"></label>
+      <label>h <input name="height" type="number" value="480"></label>
+      <button type="submit">Render</button>
+    </form>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
