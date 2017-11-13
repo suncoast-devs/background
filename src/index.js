@@ -15,17 +15,25 @@ const COLORS = {
 const cellSize = 60
 const elemSize = 20
 
-const canvas = document.createElement('canvas')
+const canvas = document.querySelector('canvas')
+const controls = document.querySelector('form')
+
+document.addEventListener('DOMContentLoaded', () => {
+  draw()
+})
+
+controls.addEventListener('submit', event => {
+  event.preventDefault()
+  draw()
+})
+
 const ctx = canvas.getContext('2d')
 const DOMURL = window.URL || window.webkitURL || window
 
-const resize = () => {
-  canvas.width = window.innerWidth
-  canvas.height = window.innerHeight
-  draw()
-}
-
 const draw = () => {
+  canvas.width = controls.width.value
+  canvas.height = controls.height.value
+
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   ctx.fillStyle = COLORS.bl
   ctx.fillRect(0, 0, canvas.width, canvas.height)
@@ -68,8 +76,3 @@ const randColor = () => {
 }
 
 const rand = n => Math.floor(Math.random() * n)
-
-window.addEventListener('resize', resize)
-document.body.appendChild(canvas)
-document.body.style = 'margin: 0'
-resize()
